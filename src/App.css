@@ -108,6 +108,28 @@ p {
      flex: 1;
 }
 
+.g28 {
+     gap: var(--g28);
+}
+
+
+.g12 {
+     gap: var(--g12);
+}
+
+.g8 {
+     gap: var(--g8);
+}
+
+.g6 {
+     gap: var(--g6);
+}
+
+.g4 {
+     gap: var(--g4);
+}
+
+
 /*   MAIN   */
 
 main {
