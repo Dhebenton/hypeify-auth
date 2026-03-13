@@ -1,0 +1,18 @@
+h1 {
+     color: var(--t900);
+     font-variation-settings: 'wght' 700;
+     font-size: 17px;
+     line-height: 1.2;
+}
+
+.heading-wrap {
+     margin-top: var(--g92);
+     margin-bottom: var(--g52);
+}
+
+.sub {
+     font-size: 14px;
+     line-height: 1.5;
+     font-variation-settings: 'wght' 490;
+     color: var(--t200);
+}

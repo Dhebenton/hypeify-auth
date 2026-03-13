@@ -1,0 +1,176 @@
+:root {
+     --g92: 92px;
+     --g60: 60px;
+     --g52: 52px;
+     --g32: 32px;
+     --g28: 28px;
+     --g14: 14px;
+     --g12: 12px;
+     --g10: 10px;
+     --g8: 8px;
+     --g6: 6px;
+     --g4: 4px;
+
+     --t900: #18181A;
+     --t800: #272729;
+     --t300: #848486;
+     --t200: #9E9E9F;
+     --t100: #BCBCBD;
+
+     --shadow-main: 0px 1px 2px 0px rgba(0, 0, 0, 5%), 0px 2px 3px 0px rgba(0, 0, 0, 2%), 0px 0px 0px 1px #e8e8e8;
+
+     --br7: 7px;
+
+     --fill-secondary: #FAFAFA;
+
+     --stroke-primary: #E8E8E8;
+}
+
+@font-face {
+     font-family: 'PPNeueMontreal';
+     src: url('/PPNeueMontreal.woff2') format('woff2');
+     font-weight: 100 900;
+     font-style: normal;
+     font-display: swap;
+}
+
+* {
+     box-sizing: border-box;
+     padding: 0;
+     font-family: "PPNeueMontreal";
+     margin: 0;
+     letter-spacing: .02em;
+     line-height: 1;
+}
+
+body {
+     height: 100%;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     text-rendering: optimizeLegibility;
+     font-kerning: normal;
+     font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+     font-optical-sizing: auto;
+     font-family: 'PPNeueMontreal';
+     background-color: white;
+     font-variant-ligatures: common-ligatures;
+     letter-spacing: .02em;
+     font-synthesis: none;
+}
+
+html {
+     height: 100%;
+}
+
+#root {
+     height: 100%;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+}
+
+button {
+     cursor: pointer;
+     background-color: transparent;
+     border: none;
+}
+
+input,
+input::placeholder,
+a,
+button,
+.tra {
+  transition: all .2s cubic-bezier(0.18, 0.06, 0.22, 1);
+}
+
+/*  TYPOGRAPHY  */
+
+p {
+     text-wrap: pretty;
+}
+
+/*  FLEX  */
+
+.f-col {
+     display: flex;
+     flex-direction: column;
+}
+
+.f-row {
+     display: flex;
+     align-items: center;
+}
+
+.a-s {
+     align-items: stretch;
+}
+
+.flex {
+     flex: 1;
+}
+
+/*   MAIN   */
+
+main {
+     padding: var(--g60) calc((50vw - 480px) / 2);
+}
+
+main .logo {
+     color: var(--t900);
+}
+
+main .logo svg{
+     height: 13px;
+}
+
+/*   TESTIMONIAL   */
+
+aside {
+     position: relative;
+     background-color: var(--fill-secondary);
+     overflow: hidden;
+     border-left: 1px solid var(--stroke-primary);
+}
+
+aside canvas {
+     scale: 1.5;
+     opacity: .9;
+}
+
+@media (max-width: 1320px) {
+     :root {
+          --multiplier: .93;
+          --g92: calc(92px * var(--multiplier));
+          --g60: calc(60px * var(--multiplier));
+          --g52: calc(52px * var(--multiplier));
+          --g32: calc(32px * var(--multiplier));
+          --g28: calc(28px * var(--multiplier));
+          --g14: calc(14px * var(--multiplier));
+          --g12: calc(12px * var(--multiplier));
+          --g10: calc(10px * var(--multiplier));
+          --g8: calc(8px * var(--multiplier));
+          --g6: calc(6px * var(--multiplier));
+          --g4: calc(4px * var(--multiplier));
+
+          --br7: 6.5px;
+     }
+
+     #root {
+          grid-template-columns: 1.1fr 1fr;
+     }
+     
+
+     /*   MAIN   */
+
+     main {
+          padding: var(--g60) calc((50vw - 450px) / 2);
+     }
+
+     main .logo {
+          color: var(--t900);
+     }
+
+     main .logo svg{
+          height: 13px;
+     }
+
+}

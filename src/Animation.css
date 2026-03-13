@@ -1,0 +1,80 @@
+:root {
+     --duration: .22s;
+     --delay: .05s;
+     --cubic: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+     --transformLeft: -10px;
+}
+
+@keyframes NextStepSlideOut {
+     0% {
+          opacity: 1;
+          transform: translateX(0px);
+     }
+
+     100% {
+          opacity: 0;
+          transform: translateX(var(--transformLeft));
+     }
+}
+
+@keyframes NextStepSlideIn {
+     0% {
+          opacity: 0;
+          transform: translateX(var(--transformLeft));
+     }
+
+     100% {
+          opacity: 1;
+          transform: translateX(0px);
+     }
+}
+
+main.animation.s1 {
+     h1,
+     .sub,
+     label,
+     form div {
+          animation: NextStepSlideOut var(--cubic) var(--duration) forwards;
+     }
+
+     .sub {
+          animation-delay: calc(var(--delay) * .5);
+     }
+
+     label {
+          animation-delay: calc(var(--delay) * 1.5);
+     }
+
+     form div {
+          animation-delay: calc(var(--delay) * 2);
+     }
+}
+
+main.animation.s2 {
+     h1,
+     .sub,
+     .block-one,
+     .block-two,
+     .form-button {
+          animation: NextStepSlideIn var(--cubic) var(--duration) forwards;
+          opacity: 0;
+          transform: translateX(var(--transformLeft));
+     }
+
+     .sub {
+          animation-delay: calc(var(--delay) * .5);
+     }
+
+     .block-one {
+          animation-delay: calc(var(--delay) * 1.5);
+     }
+
+     .block-two {
+          animation-delay: calc(var(--delay) * 2.5);
+     }
+
+     .form-button {
+          animation-delay: calc(var(--delay) * 3.5);
+     }
+}
